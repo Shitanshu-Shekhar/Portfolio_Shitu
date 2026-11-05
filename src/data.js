@@ -9,9 +9,10 @@ export const profile = {
 };
 
 export const navItems = [
+  ['Home', 'home'],
   ['About', 'about'],
   ['Skills', 'skills'],
-  ['Projects', 'projects'],
+  ['Portfolio', 'projects'],
   ['Journey', 'journey'],
   ['Contact', 'contact'],
 ];

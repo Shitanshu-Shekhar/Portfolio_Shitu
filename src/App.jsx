@@ -38,26 +38,15 @@ function Header({ activeSection }) {
   );
 }
 
-function CodeIllustration() {
+function ProfilePortrait() {
   return (
-    <div className="hero-art" aria-label="Developer's code editor illustration" role="img">
-      <div className="art-halo halo-one" /><div className="art-halo halo-two" />
-      <div className="editor-card">
-        <div className="editor-top"><i /><i /><i /><span>building / something-useful</span></div>
-        <div className="editor-content"><div className="line-numbers">01<br />02<br />03<br />04<br />05<br />06<br />07</div><pre><span className="syntax-pink">const</span> curiosity = <span className="syntax-green">true</span>;
-<span className="syntax-pink">function</span> <span className="syntax-blue">solve</span>(problem) {'{'}
-  <span className="syntax-pink">return</span> <span className="syntax-green">learn</span>(problem);
-{'}'}
-
-<span className="syntax-pink">while</span> (building) {'{'}
-  ship(<span className="syntax-orange">something useful</span>);
-{'}'}</pre></div>
-        <div className="editor-bottom"><span>❯</span> ready to build <i /></div>
-      </div>
-      <div className="float-tag tag-java"><span>J</span> Java</div>
-      <div className="float-tag tag-react"><span>⚛</span> React</div>
-      <div className="art-note"><i /> Curious by default<br /><b>Building with intent</b></div>
-    </div>
+    <figure className="hero-art">
+      <div className="portrait-orbit orbit-one" /><div className="portrait-orbit orbit-two" />
+      <div className="portrait-backdrop" />
+      <img className="profile-photo" src="/assets/profile.jpg" alt="Shitanshu Shekhar at Chandigarh University" fetchPriority="high" />
+      <figcaption className="portrait-caption"><span className="availability-dot" /> OPEN TO INTERNSHIPS</figcaption>
+      <span className="portrait-tag portrait-tag-code">&lt; build / learn / repeat &gt;</span>
+    </figure>
   );
 }
 
@@ -65,15 +54,16 @@ function Hero({ roleIndex }) {
   return (
     <section id="home" className="hero section-wrap">
       <div className="hero-copy">
-        <p className="eyebrow hero-eyebrow"><span className="availability-dot" /> SOFTWARE ENGINEERING · ARA, INDIA</p>
-        <h1>Ideas into<br /><span className="headline-accent">useful</span><br />software<span className="orange-dot">.</span></h1>
-        <p className="hero-name">Hi, I’m <b>Shitanshu Shekhar.</b></p>
-        <p className="hero-role">Aspiring Software Engineer <i>·</i> <span key={roles[roleIndex]} className="role-swap">{roles[roleIndex]}</span></p>
-        <p className="hero-intro">I love solving hard problems and building full-stack applications that make everyday tasks simpler. I’m a student, a curious engineer, and always working on the next useful thing.</p>
-        <div className="hero-actions"><a className="button button-primary" href="#projects">Explore my work <Arrow /></a><a className="button button-outline" href="#contact">Get in touch <Arrow diagonal /></a></div>
+        <p className="eyebrow hero-eyebrow">HI, I’M</p>
+        <h1>Shitanshu<br />Shekhar<span className="orange-dot">.</span></h1>
+        <p className="hero-title-accent">Aspiring Software Engineer</p>
+        <p className="hero-role"><span key={roles[roleIndex]} className="role-swap">{roles[roleIndex]}</span> <i>·</i> DSA enthusiast</p>
+        <p className="hero-intro">I build thoughtful full-stack applications and love turning hard problems into useful software. Currently studying Computer Science Engineering at Chandigarh University and looking for an opportunity to grow as an engineer.</p>
+        <div className="hero-actions"><a className="button button-primary" href={`mailto:${profile.email}`}>Hire me <Arrow diagonal /></a><a className="button button-outline" href="/assets/Shitanshu_Shekhar_Resume.pdf" download="Shitanshu_Shekhar_Resume.pdf">Download resume <span className="download-icon">↓</span></a></div>
         <div className="hero-socials"><a href={profile.github} target="_blank" rel="noreferrer">GitHub ↗</a><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a><a href={profile.leetcode} target="_blank" rel="noreferrer">LeetCode ↗</a></div>
+        <div className="hero-metrics"><div><b>400<span>+</span></b><small>PROBLEMS SOLVED</small></div><div><b>03</b><small>LIVE PROJECTS</small></div><div><b>8.32</b><small>CGPA</small></div></div>
       </div>
-      <CodeIllustration />
+      <ProfilePortrait />
       <a className="scroll-cue" href="#about"><span /> SCROLL TO EXPLORE</a>
       <span className="hero-index">01 — 06</span>
     </section>

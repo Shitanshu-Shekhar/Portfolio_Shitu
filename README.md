@@ -2,6 +2,8 @@
 
 React portfolio for Shitanshu Shekhar, built with Vite and deployed as a static frontend on Vercel.
 
+The hero uses the supplied profile photo and links directly to the supplied resume PDF in `public/assets/`.
+
 ## Local development
 
 ```sh
